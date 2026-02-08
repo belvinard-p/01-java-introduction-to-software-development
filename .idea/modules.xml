@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-java-introduction-to-software-development.iml" filepath="$PROJECT_DIR$/01-java-introduction-to-software-development.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-1-getting-started/module-1-getting-started.iml" filepath="$PROJECT_DIR$/module-1-getting-started/module-1-getting-started.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-2-control-flow/module-2-control-flow.iml" filepath="$PROJECT_DIR$/module-2-control-flow/module-2-control-flow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-3-oop-basics/module-3-oop-basics.iml" filepath="$PROJECT_DIR$/module-3-oop-basics/module-3-oop-basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-4-final-project/module-4-final-project.iml" filepath="$PROJECT_DIR$/module-4-final-project/module-4-final-project.iml" />
+    </modules>
+  </component>
+</project>
