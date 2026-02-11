@@ -7,7 +7,7 @@ public class BankAccount {
     private static final Logger logger = Logger.getLogger(BankAccount.class.getName());
     private String accountNumber;
     private String accountHolder;
-    protected double balance;  //Protected - accessible by subclasses
+    protected double balance;
 
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("123456789", "Belvinard", 100_000.0);
@@ -34,6 +34,10 @@ public class BankAccount {
             return;
         }
         balance += amount;
+    }
+
+    public void deposit(int amount) {
+        deposit((double) amount);
     }
 
     public boolean withdraw(double amount) {
