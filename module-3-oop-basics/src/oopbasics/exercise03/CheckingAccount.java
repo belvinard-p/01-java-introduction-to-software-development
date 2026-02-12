@@ -20,11 +20,10 @@ public class CheckingAccount extends BankAccount {
             logger.log(Level.WARNING, "Withdrawal failed: Amount must be positive");
             return false;
         }
-        if (balance + overdraftLimit < amount) {
+        if (getBalance() + overdraftLimit < amount) {
             logger.log(Level.WARNING, "Withdrawal failed: Exceeds overdraft limit");
             return false;
         }
-        balance -= amount;
-        return true;
+        return super.withdraw(amount);
     }
 }

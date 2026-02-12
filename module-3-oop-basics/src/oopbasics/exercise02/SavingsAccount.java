@@ -15,10 +15,6 @@ public class SavingsAccount extends BankAccount {
         this.interestRate = interestRate;
     }
 
-    public double getBalance() {
-        return balance;
-    }
-
     @Override
     public void displayBalance() {
         super.displayBalance();
@@ -26,8 +22,7 @@ public class SavingsAccount extends BankAccount {
     }
 
     public void applyInterest() {
-        double currentBalance = getBalance();
-        double interest = currentBalance * interestRate;
+        double interest = getBalance() * interestRate;
         deposit(interest);
         logger.log(Level.INFO, "Interest applied: " + interest);
     }

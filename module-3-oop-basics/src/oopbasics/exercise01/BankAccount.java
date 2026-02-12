@@ -7,7 +7,11 @@ public class BankAccount {
     private static final Logger logger = Logger.getLogger(BankAccount.class.getName());
     private String accountNumber;
     private String accountHolder;
-    protected double balance;
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
 
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("123456789", "Belvinard", 100_000.0);
