@@ -3,7 +3,7 @@ package oopbasics.exercise01;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class BankAccount {
+public abstract class BankAccount {
     private static final Logger logger = Logger.getLogger(BankAccount.class.getName());
     private String accountNumber;
     private String accountHolder;
@@ -13,14 +13,7 @@ public class BankAccount {
         return balance;
     }
 
-    public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount("123456789", "Belvinard", 100_000.0);
-        bankAccount.displayBalance();
-        bankAccount.deposit(2_000.0);
-        bankAccount.displayBalance();
-        bankAccount.withdraw(500_000.0);
-        bankAccount.displayBalance();
-    }
+    public abstract void displayAccountType();
 
     public BankAccount(String accountNumber, String accountHolder, double balance) {
         this.accountNumber = accountNumber;
@@ -60,5 +53,13 @@ public class BankAccount {
     public void displayBalance() {
         logger.log(Level.INFO, "Account Number: {0}, Account Holder: {1}, Balance: {2}",
                 new Object[]{accountNumber, accountHolder, balance});
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getAccountHolder() {
+        return accountHolder;
     }
 }

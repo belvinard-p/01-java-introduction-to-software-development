@@ -21,6 +21,11 @@ public class SavingsAccount extends BankAccount {
         logger.log(Level.INFO, "Interest rate: " + (interestRate * 100) + "%");
     }
 
+    @Override
+    public void displayAccountType() {
+        logger.log(Level.INFO, "This is a Savings Account");
+    }
+
     public void applyInterest() {
         double interest = getBalance() * interestRate;
         deposit(interest);

@@ -26,4 +26,9 @@ public class CheckingAccount extends BankAccount {
         }
         return super.withdraw(amount);
     }
+
+    @Override
+    public void displayAccountType() {
+        logger.log(Level.INFO, "This is a Checking Account");
+    }
 }
