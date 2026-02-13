@@ -1,11 +1,12 @@
 package oopbasics.exercise02;
 
 import oopbasics.exercise01.BankAccount;
+import oopbasics.exercise06.Notifiable;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SavingsAccount extends BankAccount {
+public class SavingsAccount extends BankAccount implements Notifiable {
     private static final Logger logger = Logger.getLogger(SavingsAccount.class.getName());
     private double interestRate;
 
@@ -30,6 +31,11 @@ public class SavingsAccount extends BankAccount {
         double interest = getBalance() * interestRate;
         deposit(interest);
         logger.log(Level.INFO, "Interest applied: " + interest);
+    }
+
+    @Override
+    public void sendAlert(String message) {
+        logger.log(Level.INFO, "Savings Alert: {0}", message);
     }
 
     public static void main(String[] args) {

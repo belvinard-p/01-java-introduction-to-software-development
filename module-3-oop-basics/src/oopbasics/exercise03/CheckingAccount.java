@@ -1,11 +1,12 @@
 package oopbasics.exercise03;
 
 import oopbasics.exercise01.BankAccount;
+import oopbasics.exercise06.CreditEligible;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CheckingAccount extends BankAccount {
+public class CheckingAccount extends BankAccount implements CreditEligible {
     private static final Logger logger = Logger.getLogger(CheckingAccount.class.getName());
     private double overdraftLimit;
 
@@ -30,5 +31,14 @@ public class CheckingAccount extends BankAccount {
     @Override
     public void displayAccountType() {
         logger.log(Level.INFO, "This is a Checking Account");
+    }
+
+    @Override
+    public boolean checkCreditEligibility() {
+        return getBalance() > -overdraftLimit * 0.5;
+    }
+
+    public double getOverdraftLimit() {
+        return overdraftLimit;
     }
 }
