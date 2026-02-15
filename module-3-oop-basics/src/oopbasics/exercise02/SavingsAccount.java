@@ -14,6 +14,7 @@ public class SavingsAccount extends BankAccount implements Notifiable {
                           double balance, double interestRate) {
         super(accountNumber, accountHolder, balance);
         this.interestRate = interestRate;
+        setDailyTransferLimit(1000.0);
     }
 
     @Override

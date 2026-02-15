@@ -13,6 +13,7 @@ public class CheckingAccount extends BankAccount implements CreditEligible {
     public CheckingAccount(String accountNumber, String accountHolder, double balance, double overdraftLimit) {
         super(accountNumber, accountHolder, balance);
         this.overdraftLimit = overdraftLimit;
+        setDailyTransferLimit(5000.0);
     }
 
     @Override

@@ -104,7 +104,7 @@ Master Object-Oriented Programming fundamentals:
 
 **Objective:** Understand interface definition (`interface`), their implementation (`implements`), and how they allow adding cross-cutting behaviors without relying on class inheritance.
 
-## 🧩 Exercise 8: Simple Transfer System
+## 🧩 Exercise 7: Simple Transfer System
 
 ### 🎯 Objective
 Introduce transfer operations using basic OOP concepts:
@@ -159,7 +159,7 @@ Jane's Account - Balance: $2,500.00
 
 ---
 
-## 🧩 Exercise 9: Transaction History with Arrays
+## 🧩 Exercise 8: Transaction History with Arrays
 
 ### 🎯 Objective
 Implement basic transaction tracking using:
@@ -218,7 +218,7 @@ Total Transactions: 5
 
 ---
 
-## 🧩 Exercise 10: Complete Banking System Integration
+## 🧩 Exercise 9: Complete Banking System Integration
 
 ### 🎯 Objective
 Integrate all OOP concepts into a comprehensive system:

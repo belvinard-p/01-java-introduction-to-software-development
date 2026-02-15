@@ -8,6 +8,8 @@ public abstract class BankAccount {
     private String accountNumber;
     private String accountHolder;
     private double balance;
+    private double dailyTransferLimit;
+    private double transferredToday;
 
     public double getBalance() {
         return balance;
@@ -19,6 +21,8 @@ public abstract class BankAccount {
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
         this.balance = balance;
+        this.dailyTransferLimit = 0.0;
+        this.transferredToday = 0.0;
     }
 
     public BankAccount(String accountNumber, String accountHolder) {
@@ -61,5 +65,25 @@ public abstract class BankAccount {
 
     public String getAccountHolder() {
         return accountHolder;
+    }
+
+    public boolean canTransfer(double amount) {
+        return transferredToday + amount <= dailyTransferLimit;
+    }
+
+    public void addToTransferredToday(double amount) {
+        transferredToday += amount;
+    }
+
+    public double getDailyTransferLimit() {
+        return dailyTransferLimit;
+    }
+
+    public void setDailyTransferLimit(double dailyTransferLimit) {
+        this.dailyTransferLimit = dailyTransferLimit;
+    }
+
+    public double getTransferredToday() {
+        return transferredToday;
     }
 }
