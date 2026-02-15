@@ -196,7 +196,7 @@ Every banking operation should be recorded for customer statements.
 public interface OnlineService {
     boolean payBill(String billType, double amount);
     void generateStatement();
-    void displayLastTransactions(int count); // show last N transactions
+    void displayLastTransactions(int count); 
 }
 ```
 

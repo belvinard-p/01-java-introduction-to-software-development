@@ -30,7 +30,7 @@ public class SavingsAccount extends BankAccount implements Notifiable {
 
     public void applyInterest() {
         double interest = getBalance() * interestRate;
-        deposit(interest);
+        recordInterest(interest);
         logger.log(Level.INFO, "Interest applied: " + interest);
     }
 

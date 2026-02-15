@@ -24,6 +24,9 @@ public class TransferService {
 
         to.deposit(amount);
         from.addToTransferredToday(amount);
+        
+        from.recordTransferOut(amount, to.getAccountNumber());
+        to.recordTransferIn(amount, from.getAccountNumber());
 
         if (description != null) {
             logger.log(Level.INFO, "Transfer: ${0} from {1}''s to {2}''s", 
@@ -49,6 +52,10 @@ public class TransferService {
 
         to.deposit(amount);
         from.addToTransferredToday(totalAmount);
+        
+        from.recordTransferOut(amount, to.getAccountNumber());
+        to.recordTransferIn(amount, from.getAccountNumber());
+        from.recordFee(fee);
 
         logger.log(Level.INFO, "Transfer with fee successful! Amount: ${0}, Fee: ${1}", 
             new Object[]{String.format("%.2f", amount), String.format("%.2f", fee)});
