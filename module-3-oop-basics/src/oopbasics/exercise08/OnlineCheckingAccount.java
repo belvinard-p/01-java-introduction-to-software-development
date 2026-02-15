@@ -33,17 +33,15 @@ public class OnlineCheckingAccount extends CheckingAccount implements OnlineServ
         displayTransactionHistory();
     }
 
-    @Override
-    public void displayLastTransactions(int count) {
-        int totalTransactions = getTransactionCount();
-        int startIndex = Math.max(0, totalTransactions - count);
-        
-        logger.log(Level.INFO, "\\n=== Last {0} Transactions ===", 
-            Math.min(count, totalTransactions));
-        
-        for (int i = startIndex; i < totalTransactions; i++) {
-            logger.log(Level.INFO, "{0}. Transaction #{1}", 
-                new Object[]{i - startIndex + 1, i + 1});
-        }
-    }
+//    @Override
+//    public void displayLastTransactions(int count) {
+//        int total = getTransactionCount();
+//        int startIndex = Math.max(0, total - count);
+//
+//        logger.log(Level.INFO, "\\n=== Last {0} Transactions ===", Math.min(count, total));
+//        for (int i = startIndex; i < total; i++) {
+//            logger.log(Level.INFO, "{0}. {1}", new Object[]{i - startIndex + 1, getTransaction(i)});
+//        }
+//    }
+
 }

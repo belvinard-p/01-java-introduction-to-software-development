@@ -136,4 +136,11 @@ public abstract class BankAccount {
     public void recordTransferIn(double amount, String fromAccountNumber) {
         addTransaction(String.format("TRANSFER IN: +$%.2f from %s", amount, fromAccountNumber));
     }
+
+    protected String getTransaction(int index) {
+        if (index >= 0 && index < transactionCount) {
+            return transactionHistory[index];
+        }
+        return null;
+    }
 }
